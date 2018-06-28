@@ -1,0 +1,6 @@
+/Makefile*
+*.o
+release/
+debug/
+*.user*
+moc_*
