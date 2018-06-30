@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.6.0
+** Created by: Qt User Interface Compiler version 5.10.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -15,6 +15,7 @@
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QStatusBar>
@@ -29,7 +30,9 @@ class Ui_MainWindow
 public:
     QWidget *centralWidget;
     QGridLayout *gridLayout_2;
-    QTableWidget *tableWidget;
+    QTableWidget *tableWidgetMain;
+    QLineEdit *lineEditSearch;
+    QTableWidget *tableWidgetSelected;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -38,22 +41,32 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(614, 454);
+        MainWindow->resize(831, 550);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         gridLayout_2 = new QGridLayout(centralWidget);
         gridLayout_2->setSpacing(6);
         gridLayout_2->setContentsMargins(11, 11, 11, 11);
         gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
-        tableWidget = new QTableWidget(centralWidget);
-        tableWidget->setObjectName(QStringLiteral("tableWidget"));
+        tableWidgetMain = new QTableWidget(centralWidget);
+        tableWidgetMain->setObjectName(QStringLiteral("tableWidgetMain"));
 
-        gridLayout_2->addWidget(tableWidget, 0, 0, 1, 1);
+        gridLayout_2->addWidget(tableWidgetMain, 1, 0, 1, 1);
+
+        lineEditSearch = new QLineEdit(centralWidget);
+        lineEditSearch->setObjectName(QStringLiteral("lineEditSearch"));
+
+        gridLayout_2->addWidget(lineEditSearch, 0, 0, 1, 1);
+
+        tableWidgetSelected = new QTableWidget(centralWidget);
+        tableWidgetSelected->setObjectName(QStringLiteral("tableWidgetSelected"));
+
+        gridLayout_2->addWidget(tableWidgetSelected, 1, 1, 1, 1);
 
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 614, 23));
+        menuBar->setGeometry(QRect(0, 0, 831, 20));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
@@ -69,7 +82,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
     } // retranslateUi
 
 };
